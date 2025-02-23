@@ -89,6 +89,7 @@ header {
 
 .address {
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* logos */
 .logo {
@@ -144,6 +145,7 @@ header {
     height: 56px;
     border: none;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover,
@@ -154,6 +156,7 @@ header {
 .page-nav .link {
     font-weight: 500;
     color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-nav .link:hover,
@@ -194,6 +197,14 @@ header {
     display: flex;
     justify-content: center;
     padding: 188px 0;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46,47,66,0.7),
+        rgba(46,47,66,0.7)
+        ),
+    url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 .header-lead {
@@ -231,6 +242,17 @@ header {
 
 .team-card {
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card:hover,
+.team-card:focus {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .product-card {
@@ -275,4 +297,112 @@ header {
 
 .footer .text {
     max-width: 264px;
+}
+
+/*pseudo-element*/
+.link.current {
+    position: relative;
+}
+
+.link.current::after {
+    content: "";
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background: #404bbf;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+
+/*icons*/
+
+.icon {
+    fill: none;
+}
+
+.advantages-list-item .icon-box {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    background: #f4f4fd;
+    height: 112px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.advantages-list-item .icon {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.team-card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card-text .icon-box {
+    display: flex;
+    gap: 24px;
+    margin: 8px auto 0 auto;
+}
+
+.footer-flex-display {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-icon-box-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.footer-flex-display .icon-box{
+    display: flex;
+    gap: 16px;
+}
+
+.team-card-text .icon-box .icon,
+.footer-flex-display .icon-box .icon {
+    fill: #4d5ae5;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card-text .icon-box .icon:hover,
+.team-card-text .icon-box .icon:focus {
+    fill: #404bbf;
+}
+
+.footer-flex-display .icon-box .icon:hover
+.footer-flex-display .icon-box .icon:focus {
+    fill: #31d0aa;
+}
+
+/*product desc*/
+.image-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    padding: 40px 32px;
+}
+
+.product-card:hover .product-desc {
+    transform: translateY(0);
 }
