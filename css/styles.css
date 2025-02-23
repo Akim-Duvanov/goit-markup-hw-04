@@ -210,7 +210,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    max-width: 1440px;
+    max-width: 1440px; 
 }
 
 .header-lead {
@@ -342,6 +342,9 @@ header {
     height: 112px;
     position: relative;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .advantages-list-item .icon {
