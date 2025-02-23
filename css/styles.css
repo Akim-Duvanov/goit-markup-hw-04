@@ -54,6 +54,10 @@ body {
 
 header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+
 }
 
 .header-lead {
@@ -204,7 +208,9 @@ header {
         ),
     url(../images/people-office.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: 50% 50%;
+    max-width: 1440px;
 }
 
 .header-lead {
@@ -257,6 +263,13 @@ header {
 
 .product-card {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .advantages-list-item:not(:last-child),
@@ -302,6 +315,7 @@ header {
 /*pseudo-element*/
 .link.current {
     position: relative;
+    color: #404bbf;
 }
 
 .link.current::after {
