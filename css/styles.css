@@ -384,12 +384,7 @@ header {
 
 .team-card .icon-box-element .link:hover,
 .team-card .icon-box-element .link:focus {
-    background-color: #404bbf;;
-}
-
-.footer-flex-display {
-    display: flex;
-    gap: 100px;
+    background-color: #404bbf;
 }
 
 .footer-icon-box-header {
@@ -401,9 +396,13 @@ header {
     margin-bottom: 16px;
 }
 
-.footer-flex-display .icon-box{
+.footer .container {
     display: flex;
-    gap: 16px;
+    align-items: baseline;
+}
+
+.footer-logo-box {
+    margin-right: 120px
 }
 
 .team-card-text .icon,
